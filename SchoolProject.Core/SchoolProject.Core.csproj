@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
     <PackageReference Include="MediatR" Version="12.5.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.5">
       <PrivateAssets>all</PrivateAssets>
@@ -30,7 +31,7 @@
     <Folder Include="Features\Students\Commands\Models\" />
     <Folder Include="Features\Students\Commands\" />
     <Folder Include="Features\Students\Commands\Validations\" />
-    <Folder Include="Mapping\" />
+    <Folder Include="Mapping\Student\CommandMapping\" />
   </ItemGroup>
 
 </Project>
