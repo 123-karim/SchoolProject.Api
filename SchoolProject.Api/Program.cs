@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using SchoolProject.Core;
 using SchoolProject.Infrastructure;
 using SchoolProject.Infrastructure.Abstracts;
 using SchoolProject.Infrastructure.Data;
@@ -19,7 +20,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(option => option.UseSqlServe
 
 #region dependency injections
 
-builder.Services.AddInfrastructureDependencies().AddServiceDependencies();
+builder.Services.AddInfrastructureDependencies().AddServiceDependencies().AddCoreDependencies();
 #endregion
 
 
