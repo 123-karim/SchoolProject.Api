@@ -3,20 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AutoMapper;
 using SchoolProject.Core.Features.Students.Queries.Results;
-using SchoolProject.Data.Entities;
 
 namespace SchoolProject.Core.Mapping.Student
 {
-   public partial class StudentProfile:Profile
+    public partial class StudentProfile
     {
-        public StudentProfile()
+        public void GetStudentByIDMapping()
         {
-            GetStudentListMapping();
-            GetStudentByIDMapping();
-            AddStudentCommandMapping();
-
+            CreateMap<Data.Entities.Student, GetSingleStudentResponse>().ForMember(dest => dest.DepartmentName, o => o.MapFrom(src => src.Department.DName));
         }
     }
 }
